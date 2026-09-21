@@ -1,0 +1,122 @@
+﻿Python 源码清单（按「基础文件 → 数据集」排列）
+=============================================================================================================
+文件                                                       状态                       大小(B)      行数  sha256(16)
+-------------------------------------------------------------------------------------------------------------
+00_check_data.py                                         旧 dataset1 脚本（可删）          414      16  1902e0b5caa99d79
+01_prepare_split.py                                      旧 dataset1 脚本（可删）         2111      68  946cfe507169ae73
+02_train_resnet_swin.py                                  旧 dataset1 脚本（可删）         5001     173  4bb40b12bfaecbea
+03_gradcam_raw.py                                        旧 dataset1 脚本（可删）         6230     210  f8efd6ff2d2d3cfe
+04_generate_noisy_test.py                                旧 dataset1 脚本（可删）         2940      97  ac1cc6187f902554
+05_evaluate_noisy_test.py                                旧 dataset1 脚本（可删）         9462     428  f00aae307cd775b4
+06_generate_enhanced_images.py                           旧 dataset1 脚本（可删）         4208     176  dd32faa980ba6479
+07_evaluate_enhanced_known_noise.py                      旧 dataset1 脚本（可删）         8613     313  2e0e6a970d39bd14
+08_quality_metrics_psnr_ssim.py                          旧 dataset1 脚本（可删）         3622     159  a949c7f400c27968
+09_build_noise_detector_dataset.py                       旧 dataset1 脚本（可删）         2870     136  cbf53d461373eaf4
+10_train_noise_detector.py                               旧 dataset1 脚本（可删）         4910     191  27188c3df393de19
+11_adaptive_unknown_pipeline.py                          旧 dataset1 脚本（可删）        11961     430  bcd72dd2fda8aa5c
+12_final_unknown_comparison.py                           旧 dataset1 脚本（可删）         9943     361  b8d9fe7f6c5df60f
+13_gradcam_recovery.py                                   旧 dataset1 脚本（可删）         7516     286  250caa6070a9da6c
+14_gradcam_known_noise_recovery.py                       旧 dataset1 脚本（可删）         8592     314  46e3db7bcec891b2
+15_generate_final_tables.py                              旧 dataset1 脚本（可删）         4101     137  a93f0819a137204a
+compare_datasets.py                                      当前工具                      9808     213  3c40454653d3bb0e
+cq500_verify.py                                          旧 dataset1 脚本（可删）         1935      49  b09c4081295a9108
+ich_common.py                                            共享层（必须）                  38823     939  d5155d06bff4217f
+visualize_enhancement_results.py                         旧 dataset1 脚本（可删）         9120     246  6cadf2e0a69f18fd
+Cq500_dataset/00_fetch_pretrained_cq500.py               在用                        6244     154  ebc1fae721708fc2
+Cq500_dataset/01_rebuild_split_cq500.py                  在用                        8959     214  7bc676efdb9fe55b
+Cq500_dataset/02_train_cq500.py                          在用                        8164     184  67db2bee017fe3ae
+Cq500_dataset/04_generate_noisy_test_cq500.py            在用                        2659      70  83bdadd099f5e9b5
+Cq500_dataset/05_evaluate_noisy_test_cq500.py            在用                        2291      55  a3fe1dffbbd7677a
+Cq500_dataset/06_generate_enhanced_images_cq500.py       在用                        3390      88  085773dad352bddc
+Cq500_dataset/07_evaluate_enhanced_known_noise_cq500.py  在用                        9150     195  14be920ab29125a9
+Cq500_dataset/08_quality_metrics_psnr_ssim_cq500.py      在用                        4046     104  5f82204d6ea0c08a
+Cq500_dataset/09_build_noise_detector_dataset_cq500.py   在用                        5051     122  e97120ae0483e734
+Cq500_dataset/10_train_noise_detector_cq500.py           在用                       11528     255  428ba9fef785e939
+Cq500_dataset/11_adaptive_unknown_pipeline_cq500.py      在用                        9615     223  3167c726a0e2f5d8
+Cq500_dataset/12_final_unknown_comparison_cq500.py       在用                        2123      50  15a7bed7fa493431
+Cq500_dataset/13_gradcam_recovery_cq500.py               在用                        2745      69  a72e8245f28351d5
+Cq500_dataset/14_gradcam_known_noise_recovery_cq500.py   在用                        3090      76  5455abaf0f5cdcab
+Cq500_dataset/15_generate_final_tables_cq500.py          在用                        6747     158  7e57b553e0f0b3c0
+Cq500_dataset/16_optimality_analysis_cq500.py            在用                       19362     391  e5627c3e418ceb57
+Cq500_dataset/17_verify_cq500_pipeline.py                在用                       23928     543  64260279dac456ce
+Cq500_dataset/18_compare_detectors_cq500.py              在用                        8881     185  556dc94a112e5cf8
+Cq500_dataset/19_tta_unknown_cq500.py                    在用                       17513     371  fb1680722bef7a04
+Cq500_dataset/20_boundary_correction_cq500.py            在用                       15180     332  51b967356d8d1ed2
+Cq500_dataset/21_prior_sensitivity.py                    在用                       11307     239  c788071f7f6a9753
+Cq500_dataset/98_pack_results.py                         在用                       14632     314  62446896900045e1
+Cq500_dataset/99_export_for_transfer.py                  在用                       13972     310  39ab6e01284db138
+Cq500_dataset/cq500_commons.py                           在用                        7068     164  61c0d2e51de11354
+Cq500_dataset/cq500_dicom_to_png.py                      在用                        7331     171  8122520a0c75fb4f
+Cq500_dataset/cq500_prepare_labels.py                    在用                        3471      77  06b44252e5aa31d1
+Cq500_dataset/cq500_rebuild_index.py                     在用                        1002      26  04f6d35810b5d4ff
+Cq500_dataset/run_cq500_pipeline.py                      在用                       13073     299  43b80de2768344a4
+Cq500_dataset/visualize_cq500.py                         在用                        3217      66  9b9104a67effaadc
+Rsna_dataset/02_train_rsna.py                            在用                        7895     182  64b2469bb6912940
+Rsna_dataset/04_generate_noisy_test_rsna.py              在用                        2478      71  d524115a895490bb
+Rsna_dataset/05_evaluate_noisy_test_rsna.py              在用                        3143      82  d18cdfa81896f8e0
+Rsna_dataset/06_generate_enhanced_images_rsna.py         在用                        2826      81  e026d498b052a94b
+Rsna_dataset/07_evaluate_enhanced_known_noise_rsna.py    在用                        8383     178  951da4c0fbc16ac6
+Rsna_dataset/08_quality_metrics_psnr_ssim_rsna.py        在用                        4149     110  520d757758d54fcf
+Rsna_dataset/09_build_noise_detector_dataset_rsna.py     在用                        4598     116  85eaf61c56391060
+Rsna_dataset/10_train_noise_detector_rsna.py             在用                       10913     246  fb21299189034480
+Rsna_dataset/11_adaptive_unknown_pipeline_rsna.py        在用                        9327     219  b256bb4f03e2abd4
+Rsna_dataset/12_final_unknown_comparison_rsna.py         在用                        2211      62  91106683b8007852
+Rsna_dataset/13_gradcam_recovery_rsna.py                 在用                        3576      90  8ea4053b20802994
+Rsna_dataset/14_gradcam_known_noise_recovery_rsna.py     在用                        3796      98  2bce722d013ebaea
+Rsna_dataset/15_generate_final_tables_rsna.py            在用                        5977     140  3738effbc7779910
+Rsna_dataset/16_optimality_analysis_rsna.py              在用                       15462     330  53c44947af0510d2
+Rsna_dataset/18_compare_detectors_rsna.py                在用                        7318     160  8c215aaa672ea03e
+Rsna_dataset/19_tta_unknown_rsna.py                      在用                       18697     388  928105a430b250a4
+Rsna_dataset/20_boundary_correction_rsna.py              在用                       15822     343  9b4fcfaee3904c69
+Rsna_dataset/21_prior_sensitivity.py                     在用                       11307     239  c788071f7f6a9753
+Rsna_dataset/98_pack_results_rsna.py                     在用                       17596     369  27887d46588c6069
+Rsna_dataset/rsna_commons.py                             在用                        6433     154  9e020c11dd5a26f3
+Rsna_dataset/rsna_dicom_to_png.py                        在用                        9880     229  50b06b5f229e403b
+Rsna_dataset/rsna_extract_fallback.py                    开发中间产物（可删）                3241      89  84267d8bbdce7657
+Rsna_dataset/rsna_extract_patient_map.py                 在用                        4834     114  247c840e72ad293b
+Rsna_dataset/rsna_extract_studyuid.py                    开发中间产物（可删）                2496      68  8b9ffb2c66e7873b
+Rsna_dataset/rsna_extract_v2_all.py                      开发中间产物（可删）                1579      38  366e30e0bbed0653
+Rsna_dataset/rsna_extract_v2_probe.py                    开发中间产物（可删）                2122      57  da4dac9abf606e5d
+Rsna_dataset/rsna_make_split.py                          在用                        8637     194  05faa5e8221bb573
+Rsna_dataset/rsna_prepare_labels.py                      在用                        2200      60  4c5d25f925f44ce0
+Rsna_dataset/rsna_prepare_part1.py                       开发中间产物（可删）                5188     109  d993f26ec8bd8136
+Rsna_dataset/rsna_verify.py                              在用                       16368     380  573a0d607ab453bb
+Rsna_dataset/run_rsna_pipeline.py                        在用                       12463     292  b238985123435123
+Rsna_dataset/visualize_rsna.py                           在用                        3748      87  57980c03480b0cc5
+PhysioNet/02_train_physionet.py                          在用                        7960     182  bcc2b22826c3390a
+PhysioNet/04_generate_noisy_test_physionet.py            在用                        2513      71  ca3344dd64ff5260
+PhysioNet/05_evaluate_noisy_test_physionet.py            在用                        3203      82  553649f2eb1ba560
+PhysioNet/06_generate_enhanced_images_physionet.py       在用                        2851      81  6c80780eacc93a05
+PhysioNet/07_evaluate_enhanced_known_noise_physionet.py  在用                        8473     178  fa6474c9d32293c7
+PhysioNet/08_quality_metrics_psnr_ssim_physionet.py      在用                        4204     110  4340d80a260a1521
+PhysioNet/09_build_noise_detector_dataset_physionet.py   在用                        4638     116  95ab9df6ed683cef
+PhysioNet/10_train_noise_detector_physionet.py           在用                       10963     246  9a4810d5c1b485fe
+PhysioNet/11_adaptive_unknown_pipeline_physionet.py      在用                        9432     219  1c2d0acd75321b41
+PhysioNet/12_final_unknown_comparison_physionet.py       在用                        2266      62  a1a0289dfaeb74f7
+PhysioNet/13_gradcam_recovery_physionet.py               在用                        3621      90  f4767f5d5ee33c7f
+PhysioNet/14_gradcam_known_noise_recovery_physionet.py   在用                        3861      98  0f8794d92040d7d0
+PhysioNet/15_generate_final_tables_physionet.py          在用                        6197     140  5f39e9eace34cf5c
+PhysioNet/16_optimality_analysis_physionet.py            在用                       15570     333  b9b9ff117e3ba4b4
+PhysioNet/18_compare_detectors_physionet.py              在用                        7413     160  dcf8bf19a3f0ef1d
+PhysioNet/19_tta_unknown_physionet.py                    在用                       19323     398  516bcc9cfb7594de
+PhysioNet/20_boundary_correction_physionet.py            在用                       16719     355  e7893b858c6d3aa4
+PhysioNet/21_prior_sensitivity.py                        在用                       11307     239  c788071f7f6a9753
+PhysioNet/99_pack_results_physionet.py                   在用                       17751     367  001b32cf1bae2026
+PhysioNet/physionet_aggregate_cv.py                      在用                       16427     340  9039259a08a87f5d
+PhysioNet/physionet_commons.py                           在用                        8624     187  ba9e4166e55d4797
+PhysioNet/physionet_images_to_png.py                     在用                        6185     146  71dd0b077efe7165
+PhysioNet/physionet_make_split.py                        在用                        8392     181  45806b518888f22f
+PhysioNet/physionet_prepare_labels.py                    在用                        3247      86  8ce0673c40deb4a2
+PhysioNet/physionet_run_cv.py                            在用                        4449     109  029cdb053b00c84d
+PhysioNet/physionet_verify.py                            在用                       18244     429  3c4a28f2425858fa
+PhysioNet/run_physionet_pipeline.py                      在用                       12966     292  f03b51974a0b528b
+PhysioNet/visualize_physionet.py                         在用                        3818      87  5d9a009ea9ea02b4
+-------------------------------------------------------------------------------------------------------------
+合计 109 个文件，852.7 KB
+
+状态说明：
+  共享层（必须）  三个数据集的 <ds>_commons.py 都 import 它，位置不可移动
+  当前工具        跨数据集对比，当前在用
+  旧 dataset1 脚本 最初单数据集阶段的脚本，数据集脚本对它引用次数为 0
+  开发中间产物    抽取/准备数据的迭代版本，最终版见同名主脚本
+  在用            该数据集流水线的组成部分
