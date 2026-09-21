@@ -1,52 +1,50 @@
-﻿# Python 源码包（基础文件 + 三个数据集）
+# Python Source Package (Base Files + Three Datasets)
 
-本包**只含 .py 源码**，不含数据、权重与结果。
+This package contains **only .py source code** — no data, no weights, no results.
 
-## 目录结构（不要改动层级）
+## Directory Structure (do not change the hierarchy)
 
 ```
 python_bundle/
-    ich_common.py              # 共享计算层：噪声、滤波器、检测器、投票、Grad-CAM
-    compare_datasets.py        # 三队列并排结果表
-    <其余根级脚本>              # 见 MANIFEST.txt 的「状态」列
+    ich_common.py              # shared compute layer: noise, filters, detectors, voting, Grad-CAM
+    compare_datasets.py        # side-by-side results table for the three cohorts
+    <remaining root-level scripts>   # see the "status" column in MANIFEST.txt
     Cq500_dataset/*.py
     Rsna_dataset/*.py
     PhysioNet/*.py
 ```
 
-## 为什么 `ich_common.py` 必须在根目录
+## Why `ich_common.py` must stay in the root directory
 
-三个 `<ds>_commons.py` 都这么做：
+All three `<ds>_commons.py` files do this:
 
 ```python
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from ich_common import (...)
 ```
 
-`parent.parent` 就是数据集目录的上一级。**把 `ich_common.py` 挪进任何子目录，
-三个数据集的每个脚本都会 import 失败。** 数据集之间的公共定义（脑窗、噪声函数、
-滤波器库、患者级投票）都在这一个文件里，三套代码因此不会各自漂移。
+`parent.parent` is the directory one level above the dataset directory. **Move `ich_common.py` into any subdirectory and every script in all three datasets will fail to import.** The definitions shared across the datasets (brain window, noise functions, filter library, patient-level voting) all live in this one file, so the three code sets never drift apart.
 
-## 部署
+## Deployment
 
 ```bash
-# 1) 放到目标机器的任意目录，保持上面的层级
-# 2) 自检（不需要数据，先确认代码本身可用）
+# 1) Place it in any directory on the target machine, keeping the hierarchy above
+# 2) Self-check (no data required — first confirm the code itself works)
 cd Cq500_dataset  && python 17_verify_cq500_pipeline.py
 cd ../Rsna_dataset && python rsna_verify.py
 cd ../PhysioNet   && python physionet_verify.py
-# 3) 逐数据集跑
-cd PhysioNet && python physionet_run_cv.py      # 5 折交叉验证
+# 3) Run dataset by dataset
+cd PhysioNet && python physionet_run_cv.py      # 5-fold cross-validation
 ```
 
-## 数据依赖（本包不含）
+## Data Dependencies (not included in this package)
 
-| 数据集 | 需要另行准备 |
+| Dataset | Must be prepared separately |
 |---|---|
-| CQ500 | 原始 DICOM，`D:\Li-kai\project\Data\medical\cq500_2` |
-| RSNA | 原始 DICOM，完整 rsna-intracranial-hemorrhage-detection |
+| CQ500 | raw DICOM, `D:\Li-kai\project\Data\medical\cq500_2` |
+| RSNA | raw DICOM, the full rsna-intracranial-hemorrhage-detection set |
 | PhysioNet | `computed-tomography-images-for-intracranial-hemorrhage-detection-and-segmentation-1.0.0` |
-| 预训练权重 | 跑 `Cq500_dataset/00_fetch_pretrained_cq500.py`（用 curl，Python 直连会失败） |
+| Pretrained weights | run `Cq500_dataset/00_fetch_pretrained_cq500.py` (uses curl; a direct download from Python will fail) |
 
-打包时间：2026-09-18 15:12
-文件总数：109
+Packaged: 2026-09-18 15:12
+Total files: 109
